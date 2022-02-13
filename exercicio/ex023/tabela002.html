@@ -11,14 +11,36 @@
         }
         table{
             width: 500px;
+            border-collapse: collapse;
+            position: relative;
         }
         td, th{
             border: 1px solid black;
             padding: 10px;
         }
+        caption{
+            font-size: 1.sem;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
         thead, tfoot{
-            background-color: gray;
+            background-color: #383838;
             color: white;
+        }
+        thead > tr > th{
+            position: sticky;
+            top: -1;
+            background-color: lightgray;
+        }
+        tbody > tr:nth-child(odd){ /*ZN-1*/
+            background-color: white;
+            font-weight: bold;
+        }
+        tbody > tr:nth-child(even){ /*ZN*/
+            background-color: lightgray;
+            text-decoration: underline;
+
         }
         td.num{
             text-align: right;
@@ -30,6 +52,7 @@
     <!--
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+            CAPTION
             THEAD
                 TR, TD, TH
             TODDY
@@ -38,10 +61,11 @@
                 TR, TD, TH
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 30px;">População</th>
             </tr>
             <tr>
                 <td>Minas Gerais</td>
@@ -58,7 +82,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Hbitantes</th>
+                <th scope="row">Total de Hbitantes</th>
                 <td class="num"><strong> 210.147.125 </strong></td>
             </tr>
             <tr>
@@ -126,18 +150,12 @@
        <tfoot>
         <tr>
            <th>Total de Habitantes</th>
-           <td>210.147.115</td>
+           <td class="num">210.147.115</td>
         </tr>
        </tfoot> 
-
-        <thead>
-
-        </thead>
-
-        <thead>
-
-        </thead>
     </table>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum harum dicta vero quia necessitatibus fugit maiores, incidunt eius est nemo alias, labore repudiandae natus, cumque dolor modi rem voluptate deserunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error illo pariatur deleniti dolore praesentium voluptate consectetur ex consequuntur quasi, ab ut aut est laudantium ipsa eius animi neque. Impedit, aspernatur?
+    </p>
 
 </body>
 </html>
