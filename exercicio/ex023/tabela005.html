@@ -1,17 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercícios de Tabelas</title>
     <style>
+        caption{
+            font-size: 1.3em;
+            font-weight: bolder;
+            padding: 8px;
+        }
+        th,td{
+            border: 1px solid black;
+            padding: 8px;
+        }
         
+        .destaque{
+            background-color: chartreuse;
+        }
+        col.cnome{
+            background-color: green;
+
+        }
+        col.cgroup{
+            background-color: blue;
+        }
     </style>
 </head>
 <body>
     <h1>Exercícios de Tabela</h1>
     <table>
+        <colgroup>
+            <col class="cnome">
+            <col class="csexo">
+            <col class="cidade">
+            <col class="cprof">
+        </colgroup>
         <caption>Cadastro</caption>
         <tr>
             <th scope="col">Nome</th>
@@ -25,6 +50,37 @@
             <td scope="col">25</td>
             <TD scope="col">Jornalista</TD>
         </tr>
+        <tr>
+        <td class="destaque">Cláudio</td>
+        <td>M</td>
+        <td>42</td>
+        <td>Professor</td>
+        </tr>
+        <tr class="destaque">
+            <td>Gustavo</td>
+            <td>M</td>
+            <td>42</td>
+            <td>Professor</td>
+        </tr>
+        <tr>
+            <td class="destaque">Hélio</td>
+            <td>M</td>
+            <td>19</td>
+            <td>Vendedor</td>
+        </tr>
+        <tr class="destaque">
+            <td class="destaque">Maria</td>
+            <td>F</td>
+            <td>39</td>
+            <td>Médica</td>
+        </tr>
+        <tr>
+            <td class="destaque">Otávio</td>
+            <td>M</td>
+            <td>22</td>
+            <td>Nutricionísta</td>
+        </tr>
+
     </table>
     
 </body>
